@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+  do { 
+        a = prompt("Nhap diem mon vat ly")  
+
+      }
+ while (a<0||a>10)
+        do { 
+        b = prompt("Nhap diem mon Hoa hoc")  
+
+      }
+ while (b<0||b>10)   
+ do { 
+        c = prompt("Nhap diem mon Sinh hoc")  
+
+      }
+ while (c<0||c>10)
+
+        a=parseFloat(a)
+        b=parseFloat(b)
+        c=parseFloat(c)     
+        let x=(a+b+c)/3
+
+document.write("Điểm trung bình của ba môn là " + x.toFixed(1))
+  
+</script>
+</body>
+</html>
