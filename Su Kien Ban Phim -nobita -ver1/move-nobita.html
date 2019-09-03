@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body onload="docReady()">
+    <img id="nobita" src="https://vignette.wikia.nocookie.net/p__/images/6/65/Nobitatrue.jpg/revision/latest?cb=20180929112340&path-prefix=protagonist" style="position:absolute;left:0; top:0;" height="150" width="155"/>
+<script>
+    
+function len() {
+    let element = document.getElementById("nobita");
+    element.style.top = parseInt(element.style.top) - 5 + 'px';
+}
+function xuong() {
+    var element = document.getElementById("nobita");
+    element.style.top = parseInt(element.style.top) + 5 + 'px';
+}
+function trai() {
+    var element = document.getElementById("nobita");
+    element.style.left = parseInt(element.style.left) - 5 + 'px';
+}
+function phai() {
+    var element = document.getElementById("nobita");
+    element.style.left = parseInt(element.style.left) + 5 + 'px';
+
+}
+
+function moveSelection(evt) {
+  // let map = {17: false, 38: false, 40: false, 37: false,39:false};
+   //17 ctrl   38up 40down 37left 39right
+  
+     
+   
+
+   
+   
+   
+   
+   
+   if (evt.keyCode==37){
+        trai();
+    }
+    else if(evt.keyCode==39){
+        phai();       
+    }
+    else if(evt.keyCode==38){
+        len();
+    }
+    else if(evt.keyCode==40){
+     
+        xuong();  
+     }        
+       
+}     
+  
+function docReady() {
+    window.addEventListener('keydown', moveSelection);
+    
+}
+
+</script>
+</body>
+</html>
