@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input id="soA" type="text" value="1">
+    <input id="soB" type="text" value="1">
+    <br>
+
+    
+    <input type="button" value="Addition(+)" onclick="myCong(soA.value,soB.value)" >
+    <input type="button" value="Subtraction(-)"  onclick="myTru(soA.value,soB.value)">
+    <input type="button" value="Multiplication(X)"  onclick="myNhan(soA.value,soB.value)">
+    <input type="button" value="Division(/)"  onclick="myChia(soA.value,soB.value)">
+    <p id="demo">Result Division </p>
+    <br>
+    <script>
+            function myCong(a,b){
+               let x1=parseInt(a);
+                    x2=parseInt(b);
+                x3=x1+x2
+                document.getElementById("demo").innerHTML="Result Division:"+ x3;
+            }
+            function myTru(a,b){
+                x=a-b
+               
+                document.getElementById("demo").innerHTML="Result Division:" + x;
+            }
+            function myNhan(a,b){
+                document.getElementById("demo").innerHTML="Result Division:"+ a*b;
+            }
+            function myChia(a,b){
+                document.getElementById("demo").innerHTML="Result Division:"+ a/b;
+            }
+        </script>
+</body>
+
+</html>
