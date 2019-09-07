@@ -6,20 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <style>
-        #main {
-            position: relative;
-            top: 0px;
-        }
-    </style>
+   
 </head>
 
 <body>
     <div id="pain">
+        <p>Link hướng dẫn  - sẽ được xóa sau khi nhấn "Chỉ nhấn khi hoàn thành xong" </p>
+        <p>https://drive.google.com/file/d/1QrfSgc2MYFIaZ8as0375dQycTIxn72Np/view?usp=sharing"</p>
         <table>
+           <caption> <a style="background-color: #4CAF50;color:#fff;font-size: 23px"> <b>Tạo khối cùng CodeGym - Học viên:Lê Duy Phúc</b></a></caption>
             <tr>
                 <td><input id="begin" style="width:90px" value="100%">Rộng <br></td>
                 <td><input id="end" style="width:90px" value="500px">Cao</td>
+               
+
                 <td><button id="click1" style="width:90px" onclick="myFun(0)">main</button></td>
                 <td><button id="click1" style="width:90px" onclick="myFun(1)" ;>head</button></td>
                 <td><button id="click1" style="width:90px" onclick="myFun(11)" ;>logo</button></td>
@@ -32,8 +32,22 @@
                 <td><button id="click1" style="width:90px" onclick="myFun(44)" ;>left_top_4</button></td>
             </tr>
             <tr>
-                <td></td>
-                <td></td>
+                    <td>
+                            <select id="bgColor" style="width:90px"> 
+                                    <option value="none">Màu sắc</option>
+                                    <option value="# FF6F61">San hô sống</option>
+                                    <option value="#6B5B95">Siêu tím</option>
+                                    <option value="#9B1B30">Chili Pepper</option>
+                                    <option  ption value="#77212E">Ớt ớt</option>
+                                    <option  ption value="#FA9A85">Màu hồng đào</option>
+                                    <option  ption value="#935529">Hạnh nhân đườngy</option>
+                                    <option  ption value="#E08119">Cheddar tối</option>
+                                    <option  ption value="#2A4B7C">Thiên hà xanh</option>
+                                    <option  ption value="#F3E0BE">Kem sữa trứng va-ni</option>
+                                    <option  ption value="#2A293E">Buổi tối màu xanh</option>
+                            </select>
+                    </td>   
+                <td><input type="checkbox" id ="fixed1" value ="1">Cố định</td>
                 <td><button id="click1" style="width:90px" onclick="myFun(45)" ;>left_top_5</button></td>
                 <td><button id="click1" style="width:90px" onclick="myFun(46)" ;>left_top_6</button></td>
                 <td><button id="click1" style="width:90px" onclick="myFun(47)" ;>left_top_7</button></td>
@@ -54,16 +68,16 @@
                 <td><button id="click1" style="width:90px" onclick="myFun(71)" ;>right_top</button></td>
                 <td><button id="click1" style="width:90px" onclick="myFun(72)" ;>right_center</button></td>
                 <td><button id="click1" style="width:90px" onclick="myFun(8)" ;>footer</button></td>
-                <td><button id="done" style="width:90px" onclick="myFun(9)" ;>Done</button></td>
+                <td colspan="3"><button id="done"  style="background-color:#4CAF50;color:white" onclick="myFun(9)" ;><b>Chỉ nhấn khi hoàn thành xong</b></button></td>
             </tr>
         </table>
     </div>
-    <div id="main">
+    <div id="main" style="top: 0px;position:relative" >
         <div id="head">
             <div id="logo"></div>
             <div id="banner"></div>
         </div>
-        <div id="headlink"></div>
+        <div  iv id="headlink"></div>
         <div id="left">
             <div id="left_top_1"></div>
             <div id="left_top_2"></div>
@@ -94,211 +108,289 @@
 <script>
     //rong 1366
     //cao 768
-
+   
     function myFun(c) {
         a = document.getElementById("begin").value;
         b = document.getElementById("end").value;
         switch (c) {
             case 0:
                 x = document.getElementById("main");
-                //     x.innerHTML="logo </br> Width : " + a + "</br> Height: "+ b;
-                x.style.backgroundColor = "#F5F5F5";
+                d=document.getElementById("bgColor").value;
+              
+                if ( document.getElementById("fixed1").checked==true)
+                 document.getElementById("main").style.position = "fixed";
+             
+             //   x.innerHTML = "banner </br> Width : " + a + "</br> Height: " + b + " </br> backgroundColor:"+d;
+                x.style.backgroundColor = d;
                 x.style.width = a;
                 x.style.height = b;
                 x.style.border = "1px solid #CDCDCD";
                 break;
             case 1:
                 x = document.getElementById("head");
-                x.style.backgroundColor = "#F5F5F5";
+                d=document.getElementById("bgColor").value;
+               
+              //  x.innerHTML = "banner </br> Width : " + a + "</br> Height: " + b + " </br> backgroundColor:"+d;
+                x.style.backgroundColor = d;
                 x.style.width = a;
                 x.style.height = b;
                 x.style.border = "1px solid #CDCDCD";
+                if ( document.getElementById("fixed1").checked==true)
+                 document.getElementById("head").style.position = "fixed";
+
                 break;
             case 11:
                 x = document.getElementById("logo");
-                x.innerHTML = "logo </br> Width : " + a + "</br> Height: " + b;
-                x.style.backgroundColor = "#F5F5F5";
+                d=document.getElementById("bgColor").value;
+                x.innerHTML = "logo </br> Width : " + a + "</br> Height: " + b + " </br> backgroundColor:"+d;
+                x.style.backgroundColor = d;
                 x.style.width = a;
                 x.style.height = b;
                 x.style.border = "1px solid #CDCDCD";
                 x.style.cssFloat = "left"
+                if ( document.getElementById("fixed1").checked==true)
+                 document.getElementById("logo").style.position = "fixed";
+
                 break;
             case 12:
                 x = document.getElementById("banner");
-                x.innerHTML = "Banner </br> Width : " + a + "</br> Height: " + b;
-                x.style.backgroundColor = "#F5F5F5";
+                d=document.getElementById("bgColor").value;
+                x.innerHTML = "banner </br> Width : " + a + "</br> Height: " + b + " </br> backgroundColor:"+d;
+                x.style.backgroundColor = d;
                 x.style.width = a;
                 x.style.height = b;
                 x.style.cssFloat = "left"
+                if ( document.getElementById("fixed1").checked==true)
+                 document.getElementById("banner").style.position = "fixed";
                 break;
             case 3:
                 x = document.getElementById("headlink");
-                x.innerHTML = "headlink </br> Width : " + a + "</br> Height: " + b;
-                x.style.backgroundColor = "#F5F5F5";
+                
+                d=document.getElementById("bgColor").value;
+               
+                x.innerHTML = "headlink </br> Width : " + a + "</br> Height: " + b + " </br> backgroundColor:"+d;
+                x.style.backgroundColor = d;
                 x.style.width = a;
                 x.style.height = b;
-                x.style.border = "1px solid black";
-                x.style.clear = "both";
+                x.style.border = "1px solid #CDCDCD";
+                if ( document.getElementById("fixed1").checked==true)
+                 document.getElementById("headlink").style.position = "fixed";
 
                 break;
+               
             case 4:
                 x = document.getElementById("left");
                 // x.innerHTML="left";
-                x.style.backgroundColor = "#F5F5F5";
+                d=document.getElementById("bgColor").value;
+             //   x.innerHTML = "bgColor </br> Width : " + a + "</br> Height: " + b + " </br> backgroundColor:"+d;
+                x.style.backgroundColor = d;
                 x.style.width = a;
                 x.style.height = b;
                 x.style.cssFloat = "left"
                 x.style.border = "1px solid #CDCDCD";
+                if ( document.getElementById("fixed1").checked==true)
+                 document.getElementById("left").style.position = "fixed";
                 break;
             case 41:
+               
                 x = document.getElementById("left_top_1");
-                x.innerHTML = "left_top_1 </br> Width : " + a + "</br> Height: " + b;
-                x.style.backgroundColor = "#F5F5F5";
+                d=document.getElementById("bgColor").value;
+                x.innerHTML = "left_top_1 </br> Width : " + a + "</br> Height: " + b + " </br> backgroundColor:"+d;
+                x.style.backgroundColor = d;
                 x.style.width = a;
                 x.style.height = b;
                 x.style.padding = 0;
                 x.style.border = "1px solid #CDCDCD";
-
+                if ( document.getElementById("fixed1").checked==true)
+                 document.getElementById("left_top_1").style.position = "fixed";
                 break;
             case 42:
                 x = document.getElementById("left_top_2");
-                x.innerHTML = "left_top_2 </br> Width : " + a + "</br> Height: " + b;
-                x.style.backgroundColor = "#F5F5F5";
+                d=document.getElementById("bgColor").value;
+                x.innerHTML = "left_top_2 </br> Width : " + a + "</br> Height: " + b + " </br> backgroundColor:"+d;
+                x.style.backgroundColor = d;
                 x.style.width = a;
                 x.style.height = b;
                 x.style.border = "1px solid #CDCDCD";
+                if ( document.getElementById("fixed1").checked==true)
+                 document.getElementById("left_top_2").style.position = "fixed";
                 break;
             case 43:
                 x = document.getElementById("left_top_3");
-                x.innerHTML = "left_top_3 </br> Width : " + a + "</br> Height: " + b;
-                x.style.backgroundColor = "#F5F5F5";
+                d=document.getElementById("bgColor").value;
+                x.innerHTML = "left_top_3 </br> Width : " + a + "</br> Height: " + b + " </br> backgroundColor:"+d;
+                x.style.backgroundColor = d;
                 x.style.width = a;
                 x.style.height = b;
                 x.style.border = "1px solid #CDCDCD";
+                if ( document.getElementById("fixed1").checked==true)
+                 document.getElementById("left_top_3").style.position = "fixed";
                 break;
             case 44:
                 x = document.getElementById("left_top_4"); x.innerHTML = "left_top_1";
-                x.innerHTML = "left_top_4 </br> Width : " + a + "</br> Height: " + b;
-                x.style.backgroundColor = "#F5F5F5";
+                d=document.getElementById("bgColor").value;
+                x.innerHTML = "left_top_4 </br> Width : " + a + "</br> Height: " + b + " </br> backgroundColor:"+d;
+                x.style.backgroundColor = d;
                 x.style.width = a;
                 x.style.height = b;
                 x.style.padding = 0;
                 x.style.border = "1px solid #CDCDCD";
+                if ( document.getElementById("fixed1").checked==true)
+                 document.getElementById("left_top_4").style.position = "fixed";
                 break;
             case 45:
                 x = document.getElementById("left_top_5");
-                x.innerHTML = "left_top_5 </br> Width : " + a + "</br> Height: " + b;
-                x.style.backgroundColor = "#F5F5F5";
+                d=document.getElementById("bgColor").value;
+                x.innerHTML = "left_top_5 </br> Width : " + a + "</br> Height: " + b + " </br> backgroundColor:"+d;
+                x.style.backgroundColor = d;
                 x.style.width = a;
                 x.style.height = b;
                 x.style.border = "1px solid #CDCDCD";
+                if ( document.getElementById("fixed1").checked==true)
+                 document.getElementById("left_top_5").style.position = "fixed";
                 break;
             case 46:
                 x = document.getElementById("left_top_6");
-                x.innerHTML = "left_top_6 </br> Width : " + a + "</br> Height: " + b;
-                x.style.backgroundColor = "#F5F5F5";
+                d=document.getElementById("bgColor").value;
+                x.innerHTML = "left_top_6 </br> Width : " + a + "</br> Height: " + b + " </br> backgroundColor:"+d;
+                x.style.backgroundColor = d;
                 x.style.width = a;
                 x.style.height = b;
                 x.style.border = "1px solid #CDCDCD";
+                if ( document.getElementById("fixed1").checked==true)
+                 document.getElementById("left_top_6").style.position = "fixed";
                 break;
             case 47:
                 x = document.getElementById("left_top_7");
-                x.innerHTML = "left_top_7 </br> Width : " + a + "</br> Height: " + b;
-                x.style.backgroundColor = "#F5F5F5";
+                d=document.getElementById("bgColor").value;
+                x.innerHTML = "left_top_7 </br> Width : " + a + "</br> Height: " + b + " </br> backgroundColor:"+d;
+                x.style.backgroundColor = d;
                 x.style.width = a;
                 x.style.height = b;
                 x.style.padding = 0;
                 x.style.border = "1px solid #CDCDCD";
+                if ( document.getElementById("fixed1").checked==true)
+                 document.getElementById("left_top_7").style.position = "fixed";
                 break;
             case 5:
                 x = document.getElementById("content");
-                x.style.backgroundColor = "#F5F5F5";
+                d=document.getElementById("bgColor").value;
+                x.innerHTML = "content </br> Width : " + a + "</br> Height: " + b + " </br> backgroundColor:"+d;
+                x.style.backgroundColor = d;
                 x.style.width = a;
                 x.style.height = b;
                 x.style.border = "1px solid #CDCDCD";
                 x.style.cssFloat = "left"
+                if ( document.getElementById("fixed1").checked==true)
+                 document.getElementById("content").style.position = "fixed";
                 break;
 
             case 52:
                 x = document.getElementById("hotnew");
-                x.innerHTML = "hotnew </br> Width : " + a + "</br> Height: " + b;
-                x.style.backgroundColor = "#F5F5F5";
+                d=document.getElementById("bgColor").value;
+                x.innerHTML = "hotnew </br> Width : " + a + "</br> Height: " + b + " </br> backgroundColor:"+d;
+                x.style.backgroundColor = d;
                 x.style.width = a;
                 x.style.height = b;
                 x.style.padding = 0;
                 x.style.border = "1px solid #CDCDCD";
                 x.style.cssFloat = "left"
+                if ( document.getElementById("fixed1").checked==true)
+                 document.getElementById("hotnew").style.position = "fixed";
                 break;
             case 53:
                 x = document.getElementById("photoslide");
-                x.innerHTML = "photoslide </br> Width : " + a + "</br> Height: " + b;
-                x.style.backgroundColor = "#F5F5F5";
+                d=document.getElementById("bgColor").value;
+                x.innerHTML = "photoslide </br> Width : " + a + "</br> Height: " + b + " </br> backgroundColor:"+d;
+                x.style.backgroundColor = d;
                 x.style.width = a;
                 x.style.height = b;
                 x.style.border = "1px solid #CDCDCD";
                 x.style.cssFloat = "left"
+                if ( document.getElementById("fixed1").checked==true)
+                 document.getElementById("photoslide").style.position = "fixed";
                 break;
             case 54:
                 x = document.getElementById("news1");
-                x.innerHTML = "new1 </br> Width : " + a + "</br> Height: " + b;
-                x.style.backgroundColor = "#F5F5F5";
+                d=document.getElementById("bgColor").value;
+                x.innerHTML = "news1 </br> Width : " + a + "</br> Height: " + b + " </br> backgroundColor:"+d;
+                x.style.backgroundColor = d;
                 x.style.width = a;
                 x.style.height = b;
                 x.style.border = "1px solid #CDCDCD";
                 x.style.clear = "both";
                 x.style.cssFloat = "left";
+                if ( document.getElementById("fixed1").checked==true)
+                 document.getElementById("news1").style.position = "fixed";
                 break;
             case 55:
                 x = document.getElementById("news2");
-                x.innerHTML = "new2 </br> Width : " + a + "</br> Height: " + b;
-                x.style.backgroundColor = "#F5F5F5";
+                d=document.getElementById("bgColor").value;
+                x.innerHTML = "news2 </br> Width : " + a + "</br> Height: " + b + " </br> backgroundColor:"+d;
+                x.style.backgroundColor = d;
                 x.style.cssFloat = "left";
                 x.style.width = a;
                 x.style.height = b;
                 x.style.padding = 0;
                 x.style.border = "1px solid #CDCDCD";
+                if ( document.getElementById("fixed1").checked==true)
+                 document.getElementById("news2").style.position = "fixed";
                 break;
             case 56:
                 x = document.getElementById("news3");
-                x.innerHTML = "new3 </br> Width : " + a + "</br> Height: " + b;
-                x.style.backgroundColor = "#F5F5F5";
+                d=document.getElementById("bgColor").value;
+                x.innerHTML = "news3 </br> Width : " + a + "</br> Height: " + b + " </br> backgroundColor:"+d;
+                x.style.backgroundColor = d;
                 x.style.cssFloat = "left";
                 x.style.width = a;
                 x.style.height = b;
                 x.style.border = "1px solid #CDCDCD";
+                if ( document.getElementById("fixed1").checked==true)
+                 document.getElementById("news3").style.position = "fixed";
                 break;
             case 57:
                 x = document.getElementById("news4");
-                x.innerHTML = "new4 </br> Width : " + a + "</br> Height: " + b;
-                x.style.backgroundColor = "#F5F5F5";
+                d=document.getElementById("bgColor").value;
+                x.innerHTML = "news4 </br> Width : " + a + "</br> Height: " + b + " </br> backgroundColor:"+d;
+                x.style.backgroundColor = d;
                 x.style.width = a;
                 x.style.height = b;
                 x.style.border = "1px solid #CDCDCD";
                 x.style.clear = "both";
                 x.style.cssFloat = "left";
+                if ( document.getElementById("fixed1").checked==true)
+                 document.getElementById("news4").style.position = "fixed";
                 break;
             case 58:
                 x = document.getElementById("news5");
-                x.innerHTML = "new5 </br> Width : " + a + "</br> Height: " + b;
-                x.style.backgroundColor = "#F5F5F5";
+                d=document.getElementById("bgColor").value;
+                x.innerHTML = "news5 </br> Width : " + a + "</br> Height: " + b + " </br> backgroundColor:"+d;
+                x.style.backgroundColor = d;
                 x.style.width = a;
                 x.style.height = b;
                 x.style.padding = 0;
                 x.style.cssFloat = "left";
                 x.style.border = "1px solid #CDCDCD";
+                if ( document.getElementById("fixed1").checked==true)
+                 document.getElementById("news5").style.position = "fixed";
                 break;
             case 60:
                 x = document.getElementById("news6");
-                x.innerHTML = "new6 </br> Width : " + a + "</br> Height: " + b;
-                x.style.backgroundColor = "#F5F5F5";
+                d=document.getElementById("bgColor").value;
+                x.innerHTML = "news6 </br> Width : " + a + "</br> Height: " + b + " </br> backgroundColor:"+d;
+                x.style.backgroundColor = d;
                 x.style.width = a;
                 x.style.height = b;
                 x.style.cssFloat = "left";
                 x.style.border = "1px solid #CDCDCD";
+                if ( document.getElementById("fixed1").checked==true)
+                 document.getElementById("news6").style.position = "fixed";
                 break;
             case 7:
                 x = document.getElementById("right");
-                x.style.backgroundColor = "blueviolet";
+                d=document.getElementById("bgColor").value;
+                //x.innerHTML = "bgColor </br> Width : " + a + "</br> Height: " + b + " </br> backgroundColor:"+d;
+                x.style.backgroundColor = d;
                 x.style.width = a;
                 x.style.height = b;
 
@@ -306,36 +398,68 @@
                 //xem lai neu left co duoc khong??
 
                 x.style.border = "1px solid #CDCDCD";
+                if ( document.getElementById("fixed1").checked==true)
+                 document.getElementById("right").style.position = "fixed";
                 break;
             case 71:
                 x = document.getElementById("right_top");
-                x.innerHTML = "right_top </br> Width : " + a + "</br> Height: " + b;
-                x.style.backgroundColor = "#F5F5F5";
+                d=document.getElementById("bgColor").value;
+                x.innerHTML = "right_top </br> Width : " + a + "</br> Height: " + b + " </br> backgroundColor:"+d;
+                x.style.backgroundColor = d;
                 x.style.width = a;
                 x.style.height = b;
                 x.style.padding = 0;
                 x.style.border = "1px solid #CDCDCD";
+                if ( document.getElementById("fixed1").checked==true)
+                 document.getElementById("right_top").style.position = "fixed";
                 break;
             case 72:
                 x = document.getElementById("right_center");
-                x.innerHTML = "right_center </br> Width : " + a + "</br> Height: " + b;
-                x.style.backgroundColor = "#F5F5F5";
+                d=document.getElementById("bgColor").value;
+                x.innerHTML = "right_center </br> Width : " + a + "</br> Height: " + b + " </br> backgroundColor:"+d;
+                x.style.backgroundColor = d;
                 x.style.width = a;
                 x.style.height = b;
                 x.style.border = "1px solid #CDCDCD";
+                if ( document.getElementById("fixed1").checked==true)
+                 document.getElementById("right_center").style.position = "fixed";
                 break;
             case 8:
                 x = document.getElementById("footer");
-                x.innerHTML = "footer </br> Width : " + a + "</br> Height: " + b;
-                x.style.backgroundColor = "#F5F5F5";
+                d=document.getElementById("bgColor").value;
+                x.innerHTML = "footer </br> Width : " + a + "</br> Height: " + b + " </br> backgroundColor:"+d;
+                x.style.backgroundColor = d;
                 x.style.width = a;
                 x.style.height = b;
                 x.style.border = "1px solid #CDCDCD";
                 x.style.clear = "both"
+                if ( document.getElementById("fixed1").checked==true)
+                 document.getElementById("footer").style.position = "fixed";
                 break;
             case 9:
                 document.getElementById("pain").style.visibility = "hidden";
                 document.getElementById("main").style.position = "absolute";
+                document.getElementById("logo").innerHTML=""
+                document.getElementById("banner").innerHTML=""
+                document.getElementById("headlink").innerHTML=""
+                document.getElementById("left_top_1").innerHTML=""
+                document.getElementById("left_top_2").innerHTML=""
+                document.getElementById("left_top_4").innerHTML=""
+                document.getElementById("left_top_5").innerHTML=""
+                document.getElementById("left_top_6").innerHTML=""
+                document.getElementById("left_top_7").innerHTML=""
+                document.getElementById("hotnew").innerHTML=""
+                document.getElementById("photoslide").innerHTML=""
+                document.getElementById("news1").innerHTML=""
+                document.getElementById("news2").innerHTML=""
+                document.getElementById("news3").innerHTML=""
+                document.getElementById("news4").innerHTML=""
+                document.getElementById("news5").innerHTML=""
+                document.getElementById("news6").innerHTML=""
+                document.getElementById("right_top").innerHTML=""
+                document.getElementById("right_center").innerHTML=""
+                document.getElementById("footer").innerHTML=""
+        
         }
     }
 </script>
