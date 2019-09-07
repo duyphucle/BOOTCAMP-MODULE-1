@@ -46,7 +46,7 @@ padding: 0;
     margin-bottom:5px;
     clear: both;
 }
-#left{
+#left{  
     width: 17%;
     height: 400px;
    
@@ -260,4 +260,7 @@ padding: 0;
     clear: both;
     border: 1px solid #CDCDCD;
     background-color: #F8F8FF;
+}
+h3{
+    text-decoration: none;
 }
