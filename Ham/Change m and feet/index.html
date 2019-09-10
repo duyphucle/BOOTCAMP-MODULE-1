@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<input  id="num_1" type="number" onclick="myFun()" onchange="myFun()">Nhap so vao day
+<br>
+<input id="memt_l" type="number">Từ Meet Sang Feet
+<br>
+<input id="feet_l" type ="number">Từ feet sang Meet
+
+<script>
+function myFun(){
+    
+        a1=document.getElementById("num_1")
+        document.getElementById("memt_l").value=a1.value*3.279;
+  
+        a1=document.getElementById("num_1")
+        document.getElementById("feet_l").value=a1.value*0.305;
+ 
+
+} 
+</script>    
+</body>
+</html>
