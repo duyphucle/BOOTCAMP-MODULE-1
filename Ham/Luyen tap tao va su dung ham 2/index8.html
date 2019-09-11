@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let a = [];
+        let i = 0;
+        let j = 0;
+        let b = [];
+        let n = 0;
+        tao_mang_nguyen();
+        dao_arr();
+        function tao_mang_nguyen() {
+            do {
+                n = +prompt("Nhap vao so phan tu cua mang");
+            }
+            while (isNaN(n) || !Number.isInteger(n) || n <= 0);
+            for (i = 0; i < n; i++) {
+                do {
+                    a[i] = +prompt("Gia tri cua phan tu thu :" + i);
+                }
+                while (isNaN(a[i]) || !Number.isInteger(a[i]));
+            }
+        }
+        //Co the toi uu hon nua truong "" và space
+        function dao_arr() {
+            for (i = a.length - 1; i >= 0; i--) {
+                b[j] = a[i];
+                j++;
+            }
+            alert("Mang moi la :" + b)
+        }
+    </script>
+</body>
+
+</html>

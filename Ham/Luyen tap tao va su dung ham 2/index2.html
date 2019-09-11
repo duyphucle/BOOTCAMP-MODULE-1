@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const pi = 3.41;
+        let r;
+        do {
+            r = prompt("Nhap vao ban kinh r: don vi(cm)")
+        }
+        while (isNaN(r) || r <= 0)
+        h_tron(r)
+        function h_tron(a) {
+            let dTich = pi * a * a;
+            alert("Dien tich hinh tron ban kinh " + a + "cm la:" + dTich + "cm2")
+            let cVi = 2 * a * pi;
+            alert("Chi vi hinh tron ban kinh " + a + "cm la:" + cVi + "cm")
+        }
+    </script>
+</body>
+
+</html>

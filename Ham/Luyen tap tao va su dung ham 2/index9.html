@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let a=[];
+        let x;
+        let n;
+        let i;
+        let count = 0;
+        tao_mang();
+        function tao_mang() {
+            do {
+                n = +prompt("Nhap vao so phan tu cua mang");
+            }
+            while (isNaN(n) || !Number.isInteger(n) || n <= 0);
+            for (i = 0; i < n; i++) {
+                a[i] = +prompt("Gia tri cua phan tu thu :" + i);
+            }
+            x = prompt("Nhap vao ky tu muon kiem tra");
+            alert("Mang da cho la:" + a + " Ky tu muon kiem tra la " + x)
+            for (i = 0; i < a.length; i++) {
+                {
+                    if (x == a[i])
+                        count++;
+                }
+            }
+            if (count ==0)
+                alert("Khong xuat hien ky tu can tim");
+            else 
+                alert(x + " Xuat hien " + count + " lan")
+        }
+    </script>
+</body>
+
+</html>

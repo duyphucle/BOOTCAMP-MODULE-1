@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    do{
+        a= prompt("Nhap vao so a");
+        a=parseFloat(a);
+    }
+        while (isNaN(a));
+    do{
+        b= prompt("Nhap vao so b");
+        b=parseFloat(b);
+    }
+        while (isNaN(b));
+    do{
+        c= prompt("Nhap vao so c");
+        c=parseFloat(c);
+    }
+        while (isNaN(c));
+        tim_min();
+    function tim_min(){
+    let min=a;
+    if (b<min) min =b;
+    if (c<min) min =c;
+    alert(min)
+}
+</script>    
+</body>
+</html>

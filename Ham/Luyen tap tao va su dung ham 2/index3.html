@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let gt;
+        do {
+            gt = prompt("Nhap vao so nguyen duong n");
+        }
+        while (isNaN(gt) || gt <= 0);
+        gt = parseInt(gt)
+        alert(gt + " giai thua = " + g_thua(gt))
+        function g_thua(n) {
+            if (n == 1) return 1;
+            else
+                return g_thua(n - 1) * n;
+        }
+
+    </script>
+</body>
+
+</html>
