@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="tim_sao()">Nhap ngoi sao can tim</button>
+    <script>
+        function tim_sao() {
+            x = prompt("Nhap vao ngoi sao can tim");
+            let ngoi_sao = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"]
+            let chom_sao = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"]
+            for (let i = 0; i < 7; i++) {
+                if (x == ngoi_sao[i]) {
+                    alert(chom_sao[i])
+                    break;
+                }
+                {
+                    alert("Khong tim thay");
+                    break;
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
