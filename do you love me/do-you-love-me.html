@@ -15,26 +15,22 @@
 
 <body>
     <h2>Do YOU LOVE ME</h2>
-    <button type="button" onclick="myFun(1)">Có</button>
-    <button position: absolute id="_Q0_C1" type="button"onmouseover="myFun(2)">NO</button>
+    <button type="button" onclick="loveMe(1)">Có</button>
+    <button position: absolute id="_Q0_C1" type="button"onmouseover="loveMe(2)">NO</button>
 <script>
 
-
-
-function myFun(a){
+function loveMe(a){
     c= Math.floor(Math.random() * (window.innerHeight - 1 + 1) ) + 1;
     b= Math.floor(Math.random() * (window.innerWidth - 1 + 1) ) + 1;
     if (a==1){
         alert("Yêu anh là đúng rồi");
     }
     else if(a==2) {
-       
-     b=b+"px"
-    
-     c=c+"px"
-   
-        document.getElementById("_Q0_C1").style.left = b;
-        document.getElementById("_Q0_C1").style.top = c;
+     b=b+"px";
+     c=c+"px";
+     d=document.getElementById("_Q0_C1")
+        d.style.left = b;
+        d.style.top = c;
     }
 }
 </script>
